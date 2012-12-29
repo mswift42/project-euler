@@ -1,8 +1,6 @@
 with open('names.txt', 'r+') as f:
     read_data = f.read()
 read_data = sorted(read_data.split(','))
-for i in read_data:
-    i.replace('"', '')
 
 
 def ordvalue(character):
