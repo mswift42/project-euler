@@ -42,7 +42,10 @@ for a in range(-999,1000,2):
             n+=1 
         if n > max:
             max = n
+            
             product = a*b
+            
+            
 print product
                 
 
