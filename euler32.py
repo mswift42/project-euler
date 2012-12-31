@@ -15,6 +15,9 @@ Find the sum of all products whose multiplicand/multiplier/product identity can 
 HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum."""
 
 def check_pandigital(multiplicand,multiplier,product):
+    if len(str(multiplicand)) + len(str(multiplier)) + len(str(product)) != 9:
+        return False
+    
     checklist = []
     for i in str(multiplicand):
         checklist.append(i)
@@ -36,6 +39,7 @@ for i in range(1,2000):
 
         
 print (sum(setpan))
+
 
 
 
