@@ -14,9 +14,6 @@ import math
 import itertools
 curlist = []
 total = 0
-faclist = list((math.factorial(i)for i in range(100)))
-def checkfac(num):
-    return num in faclist
 
 for i in range(100000):
     total = 0
