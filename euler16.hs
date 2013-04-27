@@ -15,3 +15,5 @@ result = sum $ map digitToInt num
 main = print result
 
 
+
+

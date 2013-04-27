@@ -19,5 +19,5 @@ for i in range(20,1001,2):
     if count > max:
         max = count
         result = i
-print result1
+print result
     

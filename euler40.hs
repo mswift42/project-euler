@@ -1,5 +1,6 @@
 import Data.Char
 
+
 {- Champernowne's constant
 Problem 40
 

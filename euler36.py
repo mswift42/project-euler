@@ -21,3 +21,10 @@ for i in range(1,1000000):
     if check_int(i) and check_bin(i):
         sum +=i
 print sum
+import random
+
+from gi.repository import Gtk
+
+
+
+

@@ -26,3 +26,6 @@ for i in range(1, 10):
                     den *= k
 
 print num, "/", den
+
+
+

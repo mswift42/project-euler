@@ -7,4 +7,5 @@
 (defn result []
   (reduce + (filter even? (take-while (partial > 4000000)
                                       (map fib (iterate inc 0))))))
+
   

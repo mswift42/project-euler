@@ -38,7 +38,7 @@ divisors n = product $ map ((+1) . length) (group (primeFactors n))
 result = head $ filter ((> 500) . divisors) triangles
   --where nDivisors n = product $ map ((+1) . length) (group (primeFactors n))    
 
-main = do
+main = 
   print result
         
 

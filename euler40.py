@@ -22,3 +22,7 @@ for i in range(1,200000):
 
 print int(num[0]) * int(num[9]) * int(num[99]) * int(num[999]) * int(num[9999]) * int(num[999999]) * int(num[99999])
 
+
+
+
+

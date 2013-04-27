@@ -13,5 +13,5 @@ Find the product abc.
 result = head [a*b*c | a <- [1,2..800], b <- [1,2..500], c <- [1,2..500], a^2 + b^2 == c^2 && a + b + c ==1000]
 
 
-main = do
+main = 
   print result
