@@ -24,13 +24,28 @@
 			     (* multiplicand multiplier)) #'<)
 	 '(1 2 3 4 5 6 7 8 9)))
 
-(defun pandigital-list ()
-  (loop
-       for i from 1 to 2000 collect
-       (loop for j from 2 to 2000
-	  when (and (nine-digits-p i j) (pandigital i j)) collect (* i j))))
+;; (defun pandigital-list ()
+;;   (loop
+;;        for i from 1 to 2000 collect
+;;        (loop for j from 2 to 2000
+;; 	  when (and (nine-digits-p i j) (pandigital i j)) collect (* i j))))
 
 
 (defun euler-32 ()
   (reduce #'+ (reduce #'union (pandigital-list))))
 
+(defun pandigital-list ()
+   (loop for i from 1 to 2000
+         for sublist = (loop for j from 2 to 2000
+                             when (and (nine-digits-p i j)
+                                       (pandigital i j))
+                             collect (* i j))
+             when sublist collect sublist))
+
+(defun pandigit-2 ()
+  (loop for i from 1 to 2000
+        when (loop for j from 2 to 2000
+		   when (and (nine-digits-p i j)
+			     (pandigital i j))
+		   collect (* i j))
+        collect it))

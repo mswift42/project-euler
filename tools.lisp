@@ -10,3 +10,15 @@
 
 (defun number-to-list (num)
   (map 'list #'digit-char-p (prin1-to-string num)))
+
+(defun permutations (lst)
+  (cond
+    ((null lst)nil)
+    ((null (rest lst)) (list lst))
+    (t (loop
+	    for i in lst
+	    append (mapcar (lambda (x) (cons i x))
+			   (permutations (remove i lst)))))))
+
+(defun number-from-list (lst)
+  (reduce #'(lambda (x y) (+ (* x 10) y)) lst))
