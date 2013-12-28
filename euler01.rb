@@ -4,7 +4,13 @@ def mod_3_or_5(n)
 end
 
 def euler_01
-  (1..999).select {|i| mod_3_or_5(i)}.inject(:+)
+  (1..999).select {|i| mod_3_or_5 i}.inject(:+)
 end
+
+
+
+
+
+
 
 
