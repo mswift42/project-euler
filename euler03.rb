@@ -20,3 +20,4 @@ def euler_03()
 
   end
 end
+"martin".empt
