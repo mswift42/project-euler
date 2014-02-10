@@ -19,17 +19,18 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million. -}
 
 
-collatz  :: Integer -> Integer
-collatz n  | odd n = 3 * n + 1
-           | even n = quot n 2
-
+collatz :: Integral a  => a -> [a]
+collatz 1 = [1]
+collatz n
+  | even n = n : collatz (n `div` 2)
+  | otherwise = n : collatz (3*n + 1)
  
-colll :: Integer -> [Integer]
-colll x =  x : iterate collatz x
 
-lengthCollatz n = length $ takeWhile (/=1) $ colll n
 
-result :: (Int, Integer)
+
+lengthCollatz n = length $ collatz n
+
+result :: (Int, Int)
 result = maximum  [ (lengthCollatz n, n) | n <- [1..999999]]
 
 main = print result
