@@ -8,13 +8,31 @@
 
 #include <algorithm>
 #include <iostream>
+#include <string>
 
-std::string reverseString(std::string s) {
-  std::string reverse = std::reverse(s.begin(), s.end());
-  return reverse;
-}
 
 
 bool isPalindrome(int n) {
-  
+  std::string str, rev;
+  str = std::to_string(n);
+  rev = str;
+  std::reverse(rev.begin(), rev.end());
+  return (str == rev);
+}
+
+int main() {
+  int max = 0;
+  int product;
+  for (int i = 100; i<1000; i++) {
+    for (int j = 100; j < 1000; j++) {
+      product = i * j;
+      if (isPalindrome(product)) {
+        if (product > max) {
+          max = product;
+        }
+      }
+    }
+
+  }
+  std::cout << max << std::endl;
 }
